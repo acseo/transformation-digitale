@@ -11,7 +11,7 @@ city: Aix-En-Provence
 state:
 zip_code: 13100
 country: France
-phone: 06 75 13 86 49
+phone: 04 42 38 70 46
 
 
 paginate: 10
@@ -25,24 +25,17 @@ collections:
     output : true
     permalink: :collection/:title:output_ext
 
-# defaults:
-#   - scope:
-#       path: ""
-#       type: step
-#     values:
-#       layout: post
-
 # social settings
 500px_url:
 facebook_url:
 github_url:
-gitlab_url: https://gitlab.com/u/andrewbanchich
-googleplus_url: https://plus.google.com/u/0/+AndrewBanchich
-instagram_url: https://instagram.com
-linkedin_url: https://www.linkedin.com/in/andrew-banchich-a4ba1195
+gitlab_url:
+googleplus_url:
+instagram_url:
+linkedin_url: https://www.linkedin.com/company/acseo
 pinterest_url:
 slack_url:
-twitter_url: https://twitter.com/andrewbanchich
+twitter_url: https://twitter.com/acseo
 
 # build settings
 markdown: kramdown
