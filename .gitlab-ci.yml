@@ -1,0 +1,19 @@
+image: ruby
+
+cache:
+  paths:
+    - vendor/
+
+before_script:
+  - bundle install --path vendor
+
+pages:
+  stage: build
+  script:
+  - gem install jekyll
+  - jekyll build -d public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

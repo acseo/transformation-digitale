@@ -1,0 +1,29 @@
+---
+layout: page
+title: Etapes
+landing-title: 'Etapes'
+nav-menu: true
+description: null
+image: null
+author: null
+---
+
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one" class="tiles">
+	{% for post in site.step %}
+	        <article>
+	                <span class="image">
+	                        <img src="{{ site.baseurl }}{{ post.image }}" alt="" />
+	                </span>
+	                <header class="major">
+	                        <h3><a href="{{ post.url}}" class="link">{{ post.title }}</a></h3>
+	                        <p>{{ post.description }}</p>
+	                </header>
+	        </article>
+	{% endfor %}
+</section>
+
+</div>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<style>
+#one {
+    background-image:    url({{ site.baseurl }}{{ page.image }});
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+#one:after {
+    -moz-transition: opacity 2.5s ease;
+    -webkit-transition: opacity 2.5s ease;
+    -ms-transition: opacity 2.5s ease;
+    transition: opacity 2.5s ease;
+    -moz-transition-delay: 0.75s;
+    -webkit-transition-delay: 0.75s;
+    -ms-transition-delay: 0.75s;
+    transition-delay: 0.75s;
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    background-color: #000000;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#one>.inner {
+    -moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease, -webkit-filter 0.5s ease;
+    -webkit-transition: opacity 1.5s ease, -webkit-transform 0.5s ease-out, -webkit-filter 0.5s ease, -webkit-filter 0.5s ease;
+    -ms-transition: opacity 1.5s ease, -ms-transform 0.5s ease-out, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
+    transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease, -webkit-filter 0.5s ease;
+    padding: 0 !important;
+    position: relative;
+    z-index: 2;
+}
+</style>
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>{{ page.title }}</h1>
+		</header>
+		<p>{{ content }}</p>
+
+        {% capture category_name %}{{ page.categories | first }}{% endcapture %}
+        {% for post in site.categories[category_name] %}
+            <h3>Contenu associé</h3>
+            <div class="row tiles">
+                <!--background-color: rgba(48, 183, 190, 0.8);-->
+                <article>
+                    <span class="image">
+	                        <img src="{{ site.baseurl }}{{ post.image }}" alt="" />
+	                </span>
+                    <header class="major" >
+                            <h3><a href="{{ post.url }}" class="link">{{post.title}}</a></h3>
+                            <p>{{ post.content | truncatewords: 10 }}</p>
+                    </header>
+    	            <a href="{{ post.url }}" class="link primary"></a>
+                </article>
+            </div>
+        {% endfor %}
+	</div>
+</section>
+
+</div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+---
+layout: page
+title: Articles
+landing-title: 'Articles'
+nav-menu: true
+description: null
+image: null
+author: null
+---
+
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+        {% for post in paginator.posts %}
+		<header class="major">
+			<h1><a href="{{ post.url}}" class="link">{{ post.title }}</a></h1>
+		</header>
+		<!--{% if post.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ post.image }}" alt="" /></span>{% endif %}-->
+		<!--{% if post.date %}<p>{{ post.date }}</p>{% endif %}-->
+		<!--<p>{{ post.content }}</p>-->
+        {% endfor %}
+	</div>
+</section>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Précédent</a>
+  {% else %}
+    <span class="previous">Précédent</span>
+  {% endif %}
+  <span class="page_number "> -- {{ paginator.page }} sur {{ paginator.total_pages }} -- </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Suivant</a>
+  {% else %}
+    <span class="next ">Suivant</span>
+  {% endif %}
+</div>
+
+</div>
