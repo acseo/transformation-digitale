@@ -19,6 +19,15 @@ img {
 			display: block;
 		}
 
+        &.left50,
+		&.right50 {
+			max-width: 50%;
+
+			img {
+				width: 100%;
+			}
+		}
+
 		&.left,
 		&.right {
 			max-width: 30%;
