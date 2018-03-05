@@ -13,8 +13,6 @@ Cette transformation s'inscrit dans un plus vaste schéma, qui est celui de la t
 Chaque entreprise et individus étant par définition différents, il n'existe donc pas de méthode "magique" à réutiliser à coup sûr
 afin de mener à bien cette transformation.
 
-Il existe cependant un certains nombre de choses qui peuvent être mises en place.......
-
 ## 5 étapes à franchir pour réussir votre transformation digitale
 
 ### 1. Evaluer sa maturité digitale
